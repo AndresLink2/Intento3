@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: url("2.jpg") no-repeat center center / cover; 
+    color: #fff;
+}
+
+.container {
+    text-align: center; 
+    margin: 0 20px; 
+    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.05);
+}
+
+h1 {
+    font-size: 1em; 
+    margin-bottom: 15px; 
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+    animation: bounce 1s infinite alternate;
+    color: #ffcc00; 
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+#game {
+    width: 800px; 
+    height: 400px; 
+    position: relative;
+    border: 5px solid #ffcc00; 
+    background: url("fondo.avif") no-repeat center center / cover; 
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+#character {
+    width: 90px; 
+    height: 100px;
+    background: url("ichigo-unscreen.gif") no-repeat center center / cover;
+    position: absolute;
+    bottom: 0; 
+    left: 50px; 
+    border-radius: 5px; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.animate {
+    animation: jump 0.8s; 
+}
+
+@keyframes jump {
+    0% { bottom: 0; }
+    50% { bottom: 180px; } 
+    100% { bottom: 0; }
+}
+
+#block {
+    width: 60px; 
+    height: 60px; 
+    background: url("1.png") no-repeat center center / cover; 
+    position: absolute;
+    left: 800px; 
+    bottom: 0; 
+    animation: blockAnimation 2s linear infinite; 
+}
+
+@keyframes blockAnimation {
+    0% { left: 800px; } 
+    100% { left: -60px; } 
+}
+
+#obstacle-counter,
+#instructions {
+    margin-top: 5px; 
+    font-size: 1.5em; 
+    background-color: rgba(255, 255, 255, 0.9); 
+    color: #333; 
+    padding: 5px; 
+    border-radius: 5px; 
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.5); 
+}
+
+#instructions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#instructions li {
+    margin: 1px 0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+#instructions li:hover {
+    color: #ffcc00; 
+    transform: scale(1.1); 
+}
+
+#previous-score {
+    font-size: 1.2em; 
+    color: #ccc; 
+    margin-top: 5px;
+}
+
+button, .button {
+    display: block;
+    background-color: #5cb85c;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto;
+    font-size: 1.2rem;
+}
+
+button:hover, .button:hover {
+    background-color: #4cae4c;
+}
+
+/* Ajustes para el enlace tipo botón */
+.button {
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    width: 55%;
+}

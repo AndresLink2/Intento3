@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - ¡Salta y esquiva!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Encuesta.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encuesta para mejorar el juego "¡Salta y esquiva!"</h1>
+        <h3>Autor: Andres Alcazar Hernandez</h3>
+        <h3>Juego similar al dinosaurio de Google</h3>
+        <video src="video/como perder el tiempo.mp4" controls></video>
+
+      
+        <a href="index.html" class="button">¿quieres juegar?</a>
+
+        <h2>Datos Personales</h2>
+        <form action="https://formspree.io/f/xanyyqjb" method="POST">
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+
+            <h2>1. ¿Qué te parece la jugabilidad del juego?</h2>
+            <label>
+                <input type="radio" name="jugabilidad" value="Muy buena" required> Muy buena
+            </label>
+            <label>
+                <input type="radio" name="jugabilidad" value="Buena"> Buena
+            </label>
+            <label>
+                <input type="radio" name="jugabilidad" value="Regular"> Regular
+            </label>
+            <label>
+                <input type="radio" name="jugabilidad" value="Mala"> Mala
+            </label>
+
+            <h2>2. ¿Cómo calificarías los gráficos del juego?</h2>
+            <select name="graficos">
+                <option value="Excelentes">Excelentes</option>
+                <option value="Buenos">Buenos</option>
+                <option value="Regulares">Regulares</option>
+                <option value="Malos">Malos</option>
+            </select>
+
+            <h2>3. ¿Cómo calificarías la dificultad del juego?</h2>
+            <select name="dificultad">
+                <option value="Muy fácil">Muy fácil</option>
+                <option value="Fácil">Fácil</option>
+                <option value="Moderada">Moderada</option>
+                <option value="Difícil">Difícil</option>
+                <option value="Muy difícil">Muy difícil</option>
+            </select>
+
+            <h2>4. ¿Qué te gustaría mejorar en el juego?</h2>
+            <input type="text" name="mejoras" placeholder="Escribe tus sugerencias aquí" required>
+
+            <h2>5. Opciones para mejorar el juego:</h2>
+            <label>
+                <input type="checkbox" name="mejoras_opciones" value="Nuevos obstáculos"> Nuevos obstáculos
+            </label><br>
+            <label>
+                <input type="checkbox" name="mejoras_opciones" value="Nuevos escenarios"> Nuevos escenarios
+            </label><br>
+            <label>
+                <input type="checkbox" name="mejoras_opciones" value="Más personajes"> Más personajes
+            </label><br>
+            <label>
+                <input type="checkbox" name="mejoras_opciones" value="Efectos especiales"> Efectos especiales
+            </label><br>
+
+            <h2>6. ¿Te gustaría que hubiera un modo multijugador?</h2>
+            <label>
+                <input type="radio" name="modo_multijugador" value="Sí" required> Sí
+            </label>
+            <label>
+                <input type="radio" name="modo_multijugador" value="No"> No
+            </label>
+
+            <h2>7. ¿Te gustaría que hubiera power-ups o habilidades especiales durante el juego?</h2>
+            <label>
+                <input type="radio" name="powerups" value="Sí" required> Sí
+            </label>
+            <label>
+                <input type="radio" name="powerups" value="No"> No
+            </label>
+
+            <h2>8. ¿Cuál crees que es la duración ideal de una partida?</h2>
+            <select name="duracion_partida">
+                <option value="Menos de 1 minuto">Menos de 1 minuto</option>
+                <option value="1-3 minutos">1-3 minutos</option>
+                <option value="Más de 3 minutos">Más de 3 minutos</option>
+            </select>
+
+            <h2>9. Comentarios adicionales</h2>
+            <textarea name="comentarios" rows="4" placeholder="Deja tus comentarios aquí"></textarea>
+
+            <br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

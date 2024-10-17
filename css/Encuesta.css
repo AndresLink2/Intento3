@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url("2.jpg") no-repeat center center / cover;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 20px auto;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+video {
+    display: block;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: right;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: left;
+    margin-top: 25px;
+    color: #555;
+    font-size: 1.2rem;
+}
+
+input[type="text"], 
+input[type="email"],
+textarea, 
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    text-align: center;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="email"]:focus,
+textarea:focus, 
+select:focus {
+    border-color: #5cb85c;
+    outline: none;
+    background-color: #fff;
+}
+
+input[type="checkbox"], 
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+button {
+    display: block;
+    width: 60%;
+    background-color: #5cb85c;
+    color: white;
+    padding: 15px 0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 30px auto;
+    font-size: 1.5rem;
+
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+/* Estilo para el enlace tipo botón */
+.button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #5cb85c;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+    margin: 20px 0;
+    width: 60%;
+    text-align: center;
+}
+
+.button:hover {
+    background-color: #4cae4c;
+}
+
+/* Media queries para dispositivos más pequeños */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    video {
+        width: 100%;
+    }
+
+    button, .button {
+        width: 80%;
+        font-size: 1.2rem;
+    }
+}

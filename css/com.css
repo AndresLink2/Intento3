@@ -1,0 +1,86 @@
+/* Estilos generales para el juego */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #87CEEB; /* Color de fondo como cielo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Contenedor del juego */
+#game {
+    width: 500px;
+    height: 200px;
+    position: relative;
+    border: 2px solid #333;
+    background-color: #7ec850; /* Color verde de césped */
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* Contador de obstáculos esquivados */
+#obstacle-counter {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Estilo del personaje */
+#character {
+    width: 30px;
+    height: 50px;
+    background-color: #ff6347; /* Color rojo claro */
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del bloque */
+#block {
+    width: 30px;
+    height: 30px;
+    background-color: #4682B4; /* Color azul claro */
+    position: absolute;
+    bottom: 0;
+    left: 480px;
+    animation: block-move 1.5s infinite linear;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación para el salto del personaje */
+@keyframes jump {
+    0% { bottom: 0; }
+    30% { bottom: 80px; }
+    70% { bottom: 80px; }
+    100% { bottom: 0; }
+}
+
+/* Clase que aplica la animación de salto */
+.animate {
+    animation: jump 500ms ease-in-out;
+}
+
+/* Animación del bloque que se mueve */
+@keyframes block-move {
+    0% { left: 500px; }
+    100% { left: -30px; }
+}
